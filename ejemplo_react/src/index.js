@@ -5,12 +5,15 @@ import App from './App';
 import Titulito from './Titulito';
 import Piesito from './Piesito';
 import reportWebVitals from './reportWebVitals';
+import Cabonsio from "./cabonsio";
+import Menu from "./Menu";
+
 
 ReactDOM.render(
   <React.StrictMode>
     
-	<Titulito />
-
+	<Cabonsio />
+	<Menu />
 	<App />
 
 	<Piesito />

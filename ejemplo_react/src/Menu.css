@@ -1,0 +1,66 @@
+nav a:hover{
+	color:#f00;
+	background-color: #fff
+	}
+	
+	
+	nav a:visited{
+	  color:#0f0;
+	}
+	nav a:hover:visited{
+		color:#f00;
+		
+	}
+	
+	
+	
+	nav a{
+	display:block;
+	text-decoration:none;
+	color: #fff;
+	}
+	
+	nav ul{padding:0px;
+	margin:0px;
+	display: flex;}
+	
+	
+	nav li{
+	flex-grow: 1;
+	text-align: center;
+	background-color: #000;
+	border: 1px solid #fff;
+	list-style: none;
+	}
+	
+	#Portada{
+	border-bottom: 2px solid red}
+	#Portada:hover{
+	background-color: red;
+	color:#fff;}
+	
+	#Portada{
+	border-bottom: 2px solid red}
+	#Portada:hover{
+	background-color: red;
+	color:#fff;}
+	
+	#Chayanne{
+	border-bottom: 2px solid blue}
+	#Chayanne:hover{
+	background-color: blue;
+	color:#fff;}
+	
+	#Contacto{
+	border-bottom: 2px solid red}
+	#Contacto:hover{
+	background-color: red;
+	color:#fff;}
+	main{
+	display:flex;
+	}
+	#cuatro{
+	border-bottom: 2px solid yellow}
+	#cuatro:hover{
+	background-color: yellow;
+	color:#000;}
