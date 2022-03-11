@@ -37,7 +37,7 @@ this.setState({
 		return(
 		<footer> 
 		<p> Copy (c) 2022 La Mama de Piesito 
-	     {this.state.hours}:{this.state.minutes}:{this.state.seconds} <//pp>
+	     {this.state.hours}:{this.state.minutes}:{this.state.seconds} </p>
 		</footer>);
 
 
