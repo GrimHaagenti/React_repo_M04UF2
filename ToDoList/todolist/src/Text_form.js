@@ -1,29 +1,40 @@
 import React from 'react';
 
 
-import TaskInput from './TaskInput'
-import TaskSubmit from './TaskSubmit'
+import TaskInput from './TaskInput';
+import TaskSubmit from './TaskSubmit';
 
 class Text_form extends React.Component{
 	constructor(props){
 
 	super(props);
-	
+	this.state = {
+		task: "" 
+	};
+
+
 }
 
-handleSubmit(event){
+handleSubmit = (event)=> {
 	event.preventDefault();	
-		console.log("hola");
-		
+	this.props.addTask(this.state.task);
+
 }
+
+handleChange = (event)=>{
+
+	this.setState({
+		task:event.target.value
+		});
+	}
 
 
 render (){
 	return (
 
-	 	<form onSubmit={this.handleSubmit} >
-		<TaskInput />
-		<TaskSubmit />
+	 	<form  >
+		<TaskInput handleChange={this.handleChange} />
+		<TaskSubmit onSubmit={this.handleSubmit}/>
 		</form>
 
 		);

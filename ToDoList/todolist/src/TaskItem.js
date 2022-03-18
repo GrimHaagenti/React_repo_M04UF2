@@ -1,10 +1,11 @@
+import RemoveTask from "./RemoveTask";
+
 function TaskItem(props){
 
-return(
-
+	return(
 	<li>
-	{props.task}
-
+		{props.task}
+		<RemoveTask />
 	</li>
 
 );

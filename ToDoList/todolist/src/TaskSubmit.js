@@ -1,20 +1,25 @@
-function TaskSubmit(){
+import React from 'react';
 
+class  TaskSubmit extends React.Component{
+	constructor (props){
+	
+		super(props);
 
+	}
+handleSubmit = (event) => {
+	event.preventDefault();
+	this.props.onSubmit(event);
+
+}
+
+render(){
 	return(
-	<button onClick= {event => {
-
-		event.preventDefault();
-		console.log("Holaaa");
-
-		}}
-
-	> Añadir </button>
+	<button onClick={this.handleSubmit}> Añadir </button>
 
 	);
 
 
 }
-
+}
 
 export default TaskSubmit;

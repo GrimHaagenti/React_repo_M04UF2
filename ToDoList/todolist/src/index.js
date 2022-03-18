@@ -5,17 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Title from './Title';
 
-import Text_form from './Text_form';
-import TaskSubmit from './TaskSubmit';
-import TaskList from './TaskList';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-	<Title />
-	<Text_form />
-	<TaskList />
   </React.StrictMode>,
   document.getElementById('root')
 );

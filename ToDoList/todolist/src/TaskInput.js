@@ -7,12 +7,14 @@ class TaskInput extends React.Component{
 		super(props);
 		this.state = {
 		value: ""
+
 	};
 }
-handleChange = (event)=> {
-this.setState({
-
+	handleChange = (event)=>{
+	this.props.handleChange(event);
+		this.setState({
 			value : event.target.value
+
 });
 
 }
@@ -24,9 +26,8 @@ this.setState({
 
 			Tarea
 
-	<input type="text" id="task_input" onChange={this.handleChange}
-	/	>
-		{this.state.value}
+	<input type="text" id="task_input" value={this.state.value}  onChange={this.handleChange}/>
+	
 		</label>
 
 
