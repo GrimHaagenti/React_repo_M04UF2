@@ -1,5 +1,5 @@
 import React from 'react'; 
-
+import TextField from '@mui/material/TextField';
 
 class TaskInput extends React.Component{
 
@@ -19,7 +19,20 @@ class TaskInput extends React.Component{
 
 }
 
+render(){
+	return(
+			<TextField id="task_input" 	
+			label="Tarea" 
+			variant="outlined" 
+			value={this.state.value}  
+			onChange={this.handleChange}/>
 
+);
+
+	}
+}
+
+/*
 	render(){
 		return (
 			<label htmlFor="task_input">
@@ -34,5 +47,5 @@ class TaskInput extends React.Component{
 		);
 	}
 }
-
+*/
 export default TaskInput;

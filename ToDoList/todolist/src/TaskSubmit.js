@@ -1,3 +1,6 @@
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import Button from '@mui/material/Button';
+
 import React from 'react';
 
 class  TaskSubmit extends React.Component{
@@ -14,7 +17,9 @@ handleSubmit = (event) => {
 
 render(){
 	return(
-	<button onClick={this.handleSubmit}> Añadir </button>
+	<Button variant="contained" onClick={this.handleSubmit}>
+	<AddCircleIcon />
+	</Button>
 
 	);
 

@@ -19,19 +19,32 @@ class App extends React.Component {
 		};
 	}
 	addTask = task =>{
-	console.log("AdA");
 		this.state.tasks.push(task);
 		this.setState({
 		tasks: this.state.tasks
 		});
-	}
+}
+removeTask = id_task =>{
+this.state.tasks.splice(id_task, 1);
+this.setState({
+tasks:this.state.tasks
+
+})
+
+
+}
+
+
+
 
 render (){
  return (
  	<div className="App"    >
 		<Title />
 		<Text_form addTask={this.addTask} />
-		<TaskList tasks={this.state.tasks} />
+		<TaskList tasks={this.state.tasks}
+			removeTask={this.removeTask}
+		/>
 
 
 			</div>

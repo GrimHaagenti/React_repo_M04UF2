@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+import List from '@mui/material/List';
 import TaskItem from './TaskItem';
 
 
@@ -22,14 +23,17 @@ let tasks =[];
 
 for (let i = 0; i < t.length; i++){
 
-	tasks.push(<TaskItem task={t[i]} key={i}  />);
+	tasks.push(<TaskItem task={t[i]} key={i} 
+	task_id={i}	
+	removeTask={this.props.removeTask}
+	/>);
 
 }
 
 return (
-<ul>
+<List>
 	{tasks}	
-</ul>
+</List>
 
 );
 
