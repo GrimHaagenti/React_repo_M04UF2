@@ -1,22 +1,93 @@
+import React from 'react';
+import './RemoveTask.css';
+
+
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
 
+import DialogTitle from '@mui/material/DialogTitle';
+import michiTriste from	"./assets/michitriste.jpg";
 
-function RemoveTask(props)
+class RemoveTask extends React.Component{
 
-{
-return (
-		<Button variant="contained" startIcon=<DeleteIcon /> onClick={function(event){
-
-
-		props.removeTask(props.task_id);
-
+	constructor (props){
+		super(props);
+		this.state = { 
+						open: false
+					 };
+	
 		}
 
-
-		}>BORRAR</Button>
-);
+	handleOnClick = ()=>{
+	this.setState({open: true });
 
 }
 
+
+	handleClose = () => {
+	this.setState({open:false});
+}
+
+	handleDelete = () =>{
+	this.props.removeTask(this.props.task_id);
+	this.setState({open:false});
+
+}
+
+
+ render() {
+ 	return (
+	<div>
+		<Button variant="contained" 
+				startIcon=<DeleteIcon /> 
+				onClick={this.handleOnClick}
+
+
+			//	{function(event){	
+					
+					//props.removeTask(props.task_id);
+
+				
+				
+		>	
+
+		BORRAR
+		 
+		</Button>
+
+		<Dialog  
+			open={this.state.open}
+			onClose={this.handleClose}
+			>
+			<DialogTitle>
+				{'De verdad quieres borrarlo?'}
+					</DialogTitle>
+
+			<DialogContent>
+
+				<img id="michi" src={michiTriste} />
+					</DialogContent>
+
+			<DialogActions>
+				<Button onClick={this.handleDelete}>
+					BORRAR
+						</Button>
+				<Button onClick={this.handleClose}> 
+
+					Salir
+					</Button>
+
+			</DialogActions>
+		</Dialog>
+</div>
+
+
+
+);
+
+}
+}
 export default RemoveTask;
