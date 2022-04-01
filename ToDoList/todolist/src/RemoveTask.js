@@ -7,7 +7,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-
+import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import michiTriste from	"./assets/michitriste.jpg";
 
@@ -16,7 +16,7 @@ class RemoveTask extends React.Component{
 	constructor (props){
 		super(props);
 		this.state = { 
-						open: false
+					open: false
 					 };
 	
 		}
@@ -63,21 +63,24 @@ class RemoveTask extends React.Component{
 			onClose={this.handleClose}
 			>
 			<DialogTitle>
-				{'De verdad quieres borrarlo?'}
+				'De verdad quieres borrar  ?'
 					</DialogTitle>
 
 			<DialogContent>
 
 				<img id="michi" src={michiTriste} />
-					</DialogContent>
+				<DialogContentText >
+							No me borres...
+						</DialogContentText>
 
+					</DialogContent>
 			<DialogActions>
-				<Button onClick={this.handleDelete}>
+			<Button startIcon={<DeleteIcon />} color="error" onClick={this.handleDelete}>
 					BORRAR
 						</Button>
 				<Button onClick={this.handleClose}> 
 
-					Salir
+					No, no llores gatito :'(
 					</Button>
 
 			</DialogActions>
