@@ -11,7 +11,8 @@ function TaskItem(props){
 		<ListItem  >
 		<ListItemButton>
 			<ListItemText primary={props.task} />
-			<RemoveTask task_id={props.task_id} removeTask={props.removeTask} />
+			<RemoveTask task_id={props.task_id}
+			task={props.task} removeTask={props.removeTask} />
 		</ListItemButton>
 		</ListItem >
 

@@ -25,6 +25,7 @@ mongo_client.connect(url, function(err,conn )
 );
 
 
+
 http.createServer(function(req,res){
 
 	res.writeHead(200, {	
@@ -32,6 +33,26 @@ http.createServer(function(req,res){
 		  'Access-Control-Allow-Origin': '*',
 		  'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
 					    });
+		
+		if (req.method == "POST"){
+		let task = [];
+		req.on('data', function(data){
+			task+= data;
+		});
+			
+		req.on('end', function(){
+
+		task = JSON.parse(task);		
+		if (task.remove == "false"){
+			console.log(task);
+			/*db.collection("tasks").insertOne({"task":task});	*/
+
+			}else{console.log(task);}	
+		});
+		
+
+			return;
+		}
 
 		let task_obj = db.collection("tasks").find();
 

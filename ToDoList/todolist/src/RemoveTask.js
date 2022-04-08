@@ -32,7 +32,7 @@ class RemoveTask extends React.Component{
 }
 
 	handleDelete = () =>{
-	this.props.removeTask(this.props.task_id);
+	this.props.removeTask(this.props.task, this.props.task_id);
 	this.setState({open:false});
 
 }
