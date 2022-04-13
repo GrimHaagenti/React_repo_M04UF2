@@ -15,8 +15,8 @@ class TaskInput extends React.Component{
 		this.setState({
 			value : event.target.value
 
-});
-
+		});
+	event.preventDefault();
 }
 
 render(){
@@ -25,7 +25,9 @@ render(){
 			label="Tarea" 
 			variant="outlined" 
 			value={this.state.value}  
-			onChange={this.handleChange}/>
+			onChange={this.handleChange}
+			onSubmit={this.handleSubmit}
+			/>
 
 );
 

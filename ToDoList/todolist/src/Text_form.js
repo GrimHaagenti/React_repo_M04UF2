@@ -22,7 +22,7 @@ handleSubmit = (event)=> {
 }
 
 handleChange = (event)=>{
-
+	
 	this.setState({
 		task:event.target.value
 		});
@@ -33,7 +33,7 @@ render (){
 	return (
 
 	 	<form  >
-		<TaskInput handleChange={this.handleChange} />
+		<TaskInput handleChange={this.handleChange} onSubmit={this.handleSubmit}/>
 		<TaskSubmit onSubmit={this.handleSubmit}/>
 		</form>
 

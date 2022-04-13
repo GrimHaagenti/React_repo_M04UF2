@@ -5,14 +5,14 @@ import ListItemText from '@mui/material/ListItemText';
 import RemoveTask from "./RemoveTask";
 
 function TaskItem(props){
-
-	
 	return (
 		<ListItem  >
 		<ListItemButton>
 			<ListItemText primary={props.task} />
 			<RemoveTask task_id={props.task_id}
-			task={props.task} removeTask={props.removeTask} />
+			task={props.task}
+			order={props.order} removeTask={props.removeTask} />
+		
 		</ListItemButton>
 		</ListItem >
 

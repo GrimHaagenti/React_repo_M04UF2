@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './RemoveTask.css';
 
@@ -32,7 +33,8 @@ class RemoveTask extends React.Component{
 }
 
 	handleDelete = () =>{
-	this.props.removeTask(this.props.task, this.props.task_id);
+	console.log(this.props.key);
+	this.props.removeTask(this.props.task,this.props.order, this.props.task_id);
 	this.setState({open:false});
 
 }

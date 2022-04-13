@@ -22,7 +22,7 @@ class App extends React.Component {
 	}
 		
 	componentDidMount = () => {
-		fetch("http://10.40.1.92:3030")
+		fetch("http://192.168.1.58:3030")
 			.then(response => response.json())
 			.then(data => this.setTasks(data));
 };
@@ -53,32 +53,35 @@ class App extends React.Component {
 	};
 
 
+
 	addTask = task =>{
-	 fetch("http://10.40.1.92:3030", {method:"post", body: '{"tasks":"' +task+'", "remove":"false"}' })
 
-	 .then(response)=>{
+	
+	 fetch("http://192.168.1.58:3030", {method:"POST", body: '{"tasks":"' +task+'", "remove":"false"}' })
+	 .then(response => response.json() )
+     .then(data => {let id = data[0]["_id"]
 
-
-	 };
-
+	
 
 		this.state.tasks.push(task);
+		this.state.tasks_id.push(id);
+
 		this.setState({
 		tasks: this.state.tasks
 		});
 		console.log(this.state.tasks);
+		console.log(this.state.tasks_id);
 
-			console.log(this.state.tasks);
-			console.log(this.state.tasks_id);
-	}
+	});
+}
 
-
-	removeTask = (task, id_task) =>{
-	
+	removeTask = (task,  key, id_task) =>{
+	console.log(key);
+	this.state.tasks.splice(key, 1);
 	this.setState({
 	tasks:this.state.tasks
 	});
-	fetch("http://10.40.1.92:3030", {method:"post", body: '{"task_id":"' +id_task+'", "remove":"true"}' });
+	fetch("http://192.168.1.58:3030", {method:"post", body: '{"task_id":"' +id_task+'", "remove":"true"}' });
 
 
 			console.log(task);
