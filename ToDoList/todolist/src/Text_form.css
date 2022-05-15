@@ -1,0 +1,7 @@
+.form{
+max-width: 500px;
+margin: auto;
+display:flex;
+justify-content: space-evenly;
+flex-grow:4;
+}

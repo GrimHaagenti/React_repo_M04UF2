@@ -3,6 +3,7 @@ import React from 'react';
 
 import TaskInput from './TaskInput';
 import TaskSubmit from './TaskSubmit';
+import "./Text_form.css"
 
 class Text_form extends React.Component{
 	constructor(props){
@@ -32,8 +33,8 @@ handleChange = (event)=>{
 render (){
 	return (
 
-	 	<form  >
-		<TaskInput handleChange={this.handleChange} onSubmit={this.handleSubmit}/>
+	 	<form  className="form">
+		<TaskInput  handleChange={this.handleChange} onSubmit={this.handleSubmit}/>
 		<TaskSubmit onSubmit={this.handleSubmit}/>
 		</form>
 

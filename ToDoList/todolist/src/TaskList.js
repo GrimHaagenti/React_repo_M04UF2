@@ -2,9 +2,10 @@ import React from 'react';
 
 
 import List from '@mui/material/List';
+import Box from '@mui/material/Box';
 import TaskItem from './TaskItem';
 
-
+import "./TaskList.css"
 
 class TaskList extends React.Component{
 	constructor(props){
@@ -33,10 +34,11 @@ for (let i = 0; i < t.length; i++){
 }
 
 return (
-<List>
-	{tasks}	
-</List>
-
+<Box className="List" >
+	<List  >
+		{tasks}	
+	</List>
+</Box >
 );
 
 }

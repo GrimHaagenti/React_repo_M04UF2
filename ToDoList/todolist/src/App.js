@@ -97,7 +97,7 @@ render (){
  	<div className="App"    >
 		<Title />
 		<Text_form addTask={this.addTask} />
-		<TaskList tasks={this.state.tasks}
+		<TaskList className="Lista"  tasks={this.state.tasks}
 				tasks_id={this.state.tasks_id}
 			removeTask={this.removeTask}
 		/>

@@ -4,6 +4,8 @@ import ListItemText from '@mui/material/ListItemText';
 
 import RemoveTask from "./RemoveTask";
 
+import "./TaskItem.css"
+
 function TaskItem(props){
 	return (
 		<ListItem  >

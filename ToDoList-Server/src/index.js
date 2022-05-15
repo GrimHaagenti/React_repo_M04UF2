@@ -49,7 +49,7 @@ http.createServer(function(req,res){
 			console.log(task.tasks);
 			db.collection("tasks").insertOne({"task":task.tasks});	
 			
-			let new_obj = db.collection("tasks").find().sort({"_id":-1}).limit(1);
+			let new_obj = db.collection("tasks").find({"task":task.tasks }).limit(1);
 			
 			let obj_id;
 			new_obj.toArray(function(err,doc){

@@ -1,6 +1,6 @@
 import React from 'react'; 
 import TextField from '@mui/material/TextField';
-
+import "./TaskInput.css"
 class TaskInput extends React.Component{
 
 	constructor (props){
@@ -21,7 +21,8 @@ class TaskInput extends React.Component{
 
 render(){
 	return(
-			<TextField id="task_input" 	
+			<TextField className="taskInput"  id="task_input"
+			InputLabelProps={{ className:"inputLabel"}}
 			label="Tarea" 
 			variant="outlined" 
 			value={this.state.value}  
